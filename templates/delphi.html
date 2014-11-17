@@ -1,0 +1,19 @@
+Welcome to Round {{ round }}
+<br>
+How likely is the following to occur:
+<br>
+{{ current_game.name }}
+
+<form method="post" role="form">
+Enter the percentage that corresponds to the likelihood of the event occurring. 
+<br>
+0 = no chance it will occur. 100 equals certainty. (Just enter a number, no percentage)
+<br>
+<input name="forecast" value="{{ forecast }}">
+<br>
+Please explain your reasoning.
+<br>
+<input name="justification" value="{{ justification }}">
+<input type="submit">
+<br>
+</form>

@@ -1,0 +1,19 @@
+Here is the question under consideration:
+<br>
+{{ current_game.name }}
+<br>
+Results for round {{ round }}
+<br>
+{% for result in results %}
+	<br>
+	Forecast: {{ result.forecast }}
+	<br>
+	Justification:
+	<br>
+	{{ result.justification }}
+	<br>
+{% endfor %}
+
+{% if number_of_results >= current_game.players %}
+	<button type="button"><a href="/{{path}}/{{next_round}}">Next Round</a></button>
+{% endif %}
